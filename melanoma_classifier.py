@@ -10,8 +10,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Define paths
-train_path = '/content/drive/MyDrive/ML/Melanoma Cancer Data/train'
-test_path = '/content/drive/MyDrive/ML/Melanoma Cancer Data/test'
+train_path = ' < PATH TO TRAIN SET IMAGES > '
+test_path = ' < PATH TO MALIGNANT TEST SET IMAGES > '
 
 # Set batch size and epochs
 batch_size = 64
@@ -85,8 +85,8 @@ plt.legend()
 plt.show()
 
 # Visualize AUC and validation AUC
-auc = history_dict['auc_4']
-val_auc = history_dict['val_auc_4']
+auc = history_dict['auc']
+val_auc = history_dict['val_auc']
 
 plt.plot(epoch_list, auc, label = 'Training AUC')
 plt.plot(epoch_list, val_auc, label = 'Validation AUC')
