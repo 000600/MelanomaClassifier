@@ -3,22 +3,22 @@
 ## The Neural Networks
 These convolutional neural networks predict whether or not a melanoma is benign or malignant. The models will predict a value close to 0 if the melanoma is predicted to be benign and a 1 if the melanoma is predicted to be malignant. Since both models predict binary categorical values, each uses a binary crossentropy loss function and has 1 output neuron. They use a standard SGD optimizer with a learning rate of 0.001 and have dropout layers to prevent overfitting.
 
-> The first model, found in the **melanoma_classifier.py** file, is a CNN that uses Tensorflow's ImageDataGenerator to augment the data it receives. It contains an architecture consisting of:
-> - 1 Input layer (with an input shape of (128, 128, 3))
-> - 1 Conv2D layer (with 32 filters, a kernel size of (3, 3), strides of (5, 5), and a ReLU activation function)
-> - 1 Max pooling 2D layer (with a pooling size of (2, 2) and strides of (2, 2))
-> - 1 Conv2D layer (with 64 filters, a kernel size of (3, 3), strides of (5, 5), and a ReLU activation function)
-> - 1 Flatten layer
-> - 1 Hidden layer (with 7 neurons and a ReLU activation function
-> - 1 Output neuron (with 1 neuron and a sigmoid activation function)
+1. The first model, found in the **melanoma_classifier.py** file, is a CNN that uses Tensorflow's ImageDataGenerator to augment the data it receives. It contains an architecture consisting of:
+    - 1 Input layer (with an input shape of (128, 128, 3))
+    - 1 Conv2D layer (with 32 filters, a kernel size of (3, 3), strides of (5, 5), and a ReLU activation function)
+    - 1 Max pooling 2D layer (with a pooling size of (2, 2) and strides of (2, 2))
+    - 1 Conv2D layer (with 64 filters, a kernel size of (3, 3), strides of (5, 5), and a ReLU activation function)
+    - 1 Flatten layer
+    - 1 Hidden layer (with 7 neurons and a ReLU activation function
+    - 1 Output neuron (with 1 neuron and a sigmoid activation function)
 
-> The second model, found in the **melanoma_classifier_vgg16.py** file, uses the pretrained VGG16 base provided by Keras (these layers are untrained in the model) and only uses a horizontal flip layer to augment the data. It has an architecture of:
-> - 1 Horizontal random flip layer (for image preprocessing)
-> - 1 VGG16 base model (with an input shape of (128, 128, 3))
-> - 1 Flatten layer
-> - 1 Dropout layer (with a dropout rate of 0.3)
-> - 1 Hidden layer (with 256 neurons and a ReLU activation function
-> - 1 Output layer (with 1 output neuron and a sigmoid activation function)
+2. The second model, found in the **melanoma_classifier_vgg16.py** file, uses the pretrained VGG16 base provided by Keras (these layers are untrained in the model) and only uses a horizontal flip layer to augment the data. It has an architecture of:
+    - 1 Horizontal random flip layer (for image preprocessing)
+    - 1 VGG16 base model (with an input shape of (128, 128, 3))
+    - 1 Flatten layer
+    - 1 Dropout layer (with a dropout rate of 0.3)
+    - 1 Hidden layer (with 256 neurons and a ReLU activation function
+    - 1 Output layer (with 1 output neuron and a sigmoid activation function)
 
 I found that the VGG16 base model tends to get a slightly higher accuracy but takes significantly longer to train. Note that when running the VGG16 base model file, you will need to input the paths of the benign and malignant images for both the training and testing datasets (four paths total) as a string — the location for where to put the paths is signified in the **melanoma_classifier_vgg16.py** file with the words: 
 - " < PATH TO MALIGNANT TRAIN IMAGES > " 
