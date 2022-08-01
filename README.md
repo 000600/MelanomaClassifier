@@ -21,14 +21,14 @@ This convolutional neural networks predict whether or not a melanoma is benign o
 > - 1 Output layer (with 1 output neuron and a sigmoid activation function)
 
 I found that the VGG16 base model tends to get a slightly higher accuracy but takes significantly longer to train. Note that when running the VGG16 base model file, you will need to input the paths of the benign and malignant images for both the training and testing datasets (four paths total) as a string — the location for where to put the paths is signified in the **melanoma_classifier_vgg16.py** file with the words: 
-- "< PATH >" 
-- "< PATH >" 
-- "< PATH >" 
-- "< PATH >" 
+- " < PATH TO MALIGNANT TRAIN IMAGES > " 
+- " < PATH TO BENIGN TRAIN IMAGES > " 
+- " < PATH TO MALIGNANT TEST IMAGES > " 
+- " < PATH TO BENIGN TEST IMAGES > " 
 
 When running the **melanoma_classifier.py** file, you will need to input the paths of the training and testing datasets (two paths total) as a string. These paths need to be inputted where the file reads:
-- "< PATH >" 
-- "< PATH >" 
+- " < PATH TO TRAIN SET IMAGES > " 
+- " < PATH TO TEST SET IMAGES > " 
 
 Feel free to further tune the hyperparameters or build upon either of the models!
 
