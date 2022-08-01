@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 # Define paths
 train_path = ' < PATH TO TRAIN SET IMAGES > '
-test_path = ' < PATH TO MALIGNANT TEST SET IMAGES > '
+test_path = ' < PATH TO TEST SET IMAGES > '
 
 # Set batch size and epochs
 batch_size = 64
