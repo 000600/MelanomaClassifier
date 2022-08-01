@@ -186,11 +186,11 @@ print(f'\nTest accuracy: {test_acc * 100}%')
 num_viewed_inputs = 10 # Change this number to view more inputs and corresponding labels and predictions
 
 # Get predictions
-predictions = model.predict(x_train)
+predictions = model.predict(x_test)
 
-# Display images, predictions, certainty and labels
+# Loop through x_test display the image, the model's prediction on that image, and the actual label of that image
 for index in range(num_viewed_inputs):
-  i = randint(0, len(x_train))
+  i = randint(0, len(x_test))  # Get a random index because the data is organized such that all of the 
   # Get image, prediction, and label
   image = x_test[i]
   pred_prob = float(predictions[i]) # Model's predicted probability that the image is of a certain class
