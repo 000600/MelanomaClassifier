@@ -1,7 +1,7 @@
 # Melanoma Classifier
 
 ## The Neural Networks
-This convolutional neural networks predict whether or not a melanoma is benign or malignant. The models will predict a value close to 0 if the melanoma is predicted to be benign and a 1 if the melanoma is predicted to be malignant. Since both models predict binary categorical values, each uses a binary crossentropy loss function and has 1 output neuron. They use a standard SGD optimizer with a learning rate of 0.001 and have dropout layers to prevent overfitting.
+These convolutional neural networks predict whether or not a melanoma is benign or malignant. The models will predict a value close to 0 if the melanoma is predicted to be benign and a 1 if the melanoma is predicted to be malignant. Since both models predict binary categorical values, each uses a binary crossentropy loss function and has 1 output neuron. They use a standard SGD optimizer with a learning rate of 0.001 and have dropout layers to prevent overfitting.
 
 > The first model, found in the **melanoma_classifier.py** file, is a CNN that uses Tensorflow's ImageDataGenerator to augment the data it receives. It contains an architecture consisting of:
 > - 1 Input layer (with an input shape of (128, 128, 3))
