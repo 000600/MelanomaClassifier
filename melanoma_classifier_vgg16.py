@@ -188,7 +188,7 @@ num_viewed_inputs = 10 # Change this number to view more inputs and correspondin
 # Get predictions
 predictions = model.predict(x_test)
 
-# Loop through x_test display the image, the model's prediction on that image, and the actual label of that image
+# Loop through x_test to display the image, the model's prediction on that image, and the actual label of that image
 for index in range(num_viewed_inputs):
   i = randint(0, len(x_test))  # Get a random index because the data is organized such that all of the 
   # Get image, prediction, and label
