@@ -190,7 +190,7 @@ predictions = model.predict(x_test)
 
 # Loop through x_test to display the image, the model's prediction on that image, and the actual label of that image
 for index in range(num_viewed_inputs):
-  i = randint(0, len(x_test))  # Get a random index because the data is organized such that all of the 
+  i = (-(index) if index % 2 == 0 else index) # Get alternate indexes so that the model predicts on both benign and malignant cases
   # Get image, prediction, and label
   image = x_test[i]
   pred_prob = float(predictions[i]) # Model's predicted probability that the image is of a certain class
