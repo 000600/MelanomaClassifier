@@ -9,7 +9,7 @@ These convolutional neural networks predict whether or not a melanoma is benign 
     - 1 Max pooling 2D layer (with a pooling size of (2, 2) and strides of (2, 2))
     - 1 Conv2D layer (with 64 filters, a kernel size of (3, 3), strides of (5, 5), and a ReLU activation function)
     - 1 Flatten layer
-    - 1 Hidden layer (with 7 neurons and a ReLU activation function
+    - 1 Hidden layer (with 7 neurons and a ReLU activation function)
     - 1 Output neuron (with 1 neuron and a sigmoid activation function)
 
 2. The second model, found in the **melanoma_classifier_vgg16.py** file, uses the pretrained VGG16 base provided by Keras (these layers are untrained in the model) and only uses a horizontal flip layer to augment the data. It has an architecture of:
