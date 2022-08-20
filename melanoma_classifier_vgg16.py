@@ -144,9 +144,8 @@ history = model.fit(x_train, y_train, epochs = epochs, batch_size = batch_size, 
 history_dict = history.history
 loss = history_dict['loss']
 val_loss = history_dict['val_loss']
-epoch_list = [i for i in range(epochs)]
 
-plt.plot(epoch_list, loss, label = 'Loss')
+plt.plot(loss, label = 'Loss')
 plt.plot(epoch_list, val_loss, label = 'Validation Loss')
 plt.title('Validation and Training Loss Across Epochs')
 plt.xlabel('Epochs')
@@ -158,8 +157,8 @@ plt.show()
 accuracy = history_dict['accuracy']
 val_accuracy = history_dict['val_accuracy']
 
-plt.plot(epoch_list, accuracy, label = 'Training Accuracy')
-plt.plot(epoch_list, val_accuracy, label =' Validation Accuracy')
+plt.plot(accuracy, label = 'Training Accuracy')
+plt.plot(val_accuracy, label =' Validation Accuracy')
 plt.title('Validation and Training Accuracy Across Epochs')
 plt.xlabel('Epochs')
 plt.ylabel('Accuracy')
@@ -170,8 +169,8 @@ plt.show()
 auc = history_dict['auc']
 val_auc = history_dict['val_auc']
 
-plt.plot(epoch_list, auc, label = 'Training AUC')
-plt.plot(epoch_list, val_auc, label = 'Validation AUC')
+plt.plot(auc, label = 'Training AUC')
+plt.plot(val_auc, label = 'Validation AUC')
 plt.title('Validation and Training AUC Across Epochs')
 plt.xlabel('Epochs')
 plt.ylabel('AUC')
