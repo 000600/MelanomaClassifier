@@ -17,7 +17,7 @@ These convolutional neural networks predict whether or not a melanoma is benign 
     - 1 VGG16 base model (with an input shape of (128, 128, 3))
     - 1 Flatten layer
     - 1 Dropout layer (with a dropout rate of 0.3)
-    - 1 Hidden layer (with 256 neurons and a ReLU activation function
+    - 1 Hidden layer (with 256 neurons and a ReLU activation function)
     - 1 Output layer (with 1 output neuron and a sigmoid activation function)
 
 I found that the VGG16 base model tends to get a slightly higher accuracy but takes significantly longer to train. Note that when running the VGG16 base model file, you will need to input the paths of the benign and malignant images for both the training and testing datasets (four paths total) as a string — the location for where to put the paths is signified in the **melanoma_classifier_vgg16.py** file with the words: 
