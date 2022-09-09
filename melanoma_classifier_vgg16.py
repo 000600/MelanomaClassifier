@@ -4,7 +4,7 @@ from PIL import Image
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+from tensorflow.keras.layers import Dense, Dropout, Flatten
 from tensorflow.keras.layers.experimental.preprocessing import RandomFlip
 from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.callbacks import EarlyStopping
