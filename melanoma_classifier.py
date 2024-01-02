@@ -28,7 +28,7 @@ val_iter = val_generator.flow_from_directory(test_path, class_mode = 'binary', c
 # Define classes
 class_map = {0 : "Benign", 1 : "Malignant"}
 
-# Initialize SGD Optimizer
+# Initialize SGD optimizer
 opt = SGD(learning_rate = 0.001)
 
 # Create model
