@@ -193,7 +193,7 @@ for index in range(num_viewed_inputs):
   # Get image, prediction, and label
   image = x_test[i]
   pred_prob = float(predictions[i]) # Model's predicted probability that the image is of a certain class
-  predicted_class = (0 if pred_prob < 0.5 else 1) # Round the value because the model will predict values in between 0 and 1
+  predicted_class = (0 if pred_prob < 0.5 else 1) # Round the value because the model will predict values between 0 and 1
   actual_class = y_test[i][0]
 
   # View results
